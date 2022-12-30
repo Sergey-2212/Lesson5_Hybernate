@@ -27,6 +27,7 @@
     <!-- Annotated entity classes -->
     <mapping class="ru.gb.User"/>
     <mapping class="ru.gb.Items"/>
+    <mapping class="ru.gb.Product"/>
 
 </session-factory>
 </hibernate-configuration>

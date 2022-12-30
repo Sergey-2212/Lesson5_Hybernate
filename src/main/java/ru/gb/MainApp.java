@@ -30,6 +30,16 @@ public class MainApp   {
             System.out.println(userDao.findAll());
             userDao.updateNameById(1L, "Garfield");
             System.out.println(userDao.findAll());
+
+            ProductRepository repository = new ProductRepository(sessionFactoryUtils);
+
+            System.out.println(repository.findAll());
+            System.out.println(repository.findById(1L));
+            repository.saveOrUpdate(new Product("Carrot", 48));
+            System.out.println(repository.findAll());
+            repository.deleteById(1L);
+            repository.deleteById(2L);
+            System.out.println(repository.findAll());
         } catch (Exception e) {
             e.printStackTrace();
             System.out.println("Упс");

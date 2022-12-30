@@ -95,7 +95,7 @@ public class UserDaoImpl implements UserDao{
 //                    .setParameter("id", id)
 //                    .executeUpdate();
             User user = session.get(User.class, id);
-            user.setName("Zigfrid");
+            user.setName(name);
             session.getTransaction().commit();
             //Комментированный код является более правильным т.к. расходует меньше памяти, не требует создавать объект
         }
